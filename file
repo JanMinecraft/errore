@@ -1,0 +1,77 @@
+package it.jan.bukkit.plugin.avvio_stop;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class avvio_stop extends JavaPlugin
+{
+    public static avvio_stop instans;
+    
+    public void onEnable()
+    {
+	getLogger().info("il plugin e stato avviato");
+    }
+    public void onDisable()
+    {
+	getLogger().warning("il plugin e stato disatttivato corettamente");
+    }
+}
+ mia da errore in consol cosi
+ 
+ C:\games\plugin\server>java -Xmx1024M -jar craftbukkit-1.7.9-R0.2.jar -o true
+Loading libraries, please wait...
+[18:43:10 INFO]: Starting minecraft server version 1.7.9
+[18:43:10 INFO]: Loading properties
+[18:43:10 INFO]: Default game type: SURVIVAL
+[18:43:10 INFO]: Generating keypair
+[18:43:10 INFO]: Starting Minecraft server on *:25565
+[18:43:12 INFO]: This server is running CraftBukkit version git-Bukkit-1.7.9-R0.
+1-10-g8688bd4-b3092jnks (MC: 1.7.9) (Implementing API version 1.7.9-R0.2)
+[18:43:12 ERROR]: Could not load 'plugins\avvio.jar' in folder 'plugins'
+org.bukkit.plugin.InvalidDescriptionException: Invalid plugin.yml
+        at org.bukkit.plugin.java.JavaPluginLoader.getPluginDescription(JavaPlug
+inLoader.java:150) ~[craftbukkit-1.7.9-R0.2.jar:git-Bukkit-1.7.9-R0.1-10-g8688bd
+4-b3092jnks]
+        at org.bukkit.plugin.SimplePluginManager.loadPlugins(SimplePluginManager
+.java:133) [craftbukkit-1.7.9-R0.2.jar:git-Bukkit-1.7.9-R0.1-10-g8688bd4-b3092jn
+ks]
+        at org.bukkit.craftbukkit.v1_7_R3.CraftServer.loadPlugins(CraftServer.ja
+va:355) [craftbukkit-1.7.9-R0.2.jar:git-Bukkit-1.7.9-R0.1-10-g8688bd4-b3092jnks]
+
+        at org.bukkit.craftbukkit.v1_7_R3.CraftServer.<init>(CraftServer.java:31
+7) [craftbukkit-1.7.9-R0.2.jar:git-Bukkit-1.7.9-R0.1-10-g8688bd4-b3092jnks]
+        at net.minecraft.server.v1_7_R3.PlayerList.<init>(PlayerList.java:68) [c
+raftbukkit-1.7.9-R0.2.jar:git-Bukkit-1.7.9-R0.1-10-g8688bd4-b3092jnks]
+        at net.minecraft.server.v1_7_R3.DedicatedPlayerList.<init>(SourceFile:14
+) [craftbukkit-1.7.9-R0.2.jar:git-Bukkit-1.7.9-R0.1-10-g8688bd4-b3092jnks]
+        at net.minecraft.server.v1_7_R3.DedicatedServer.init(DedicatedServer.jav
+a:126) [craftbukkit-1.7.9-R0.2.jar:git-Bukkit-1.7.9-R0.1-10-g8688bd4-b3092jnks]
+        at net.minecraft.server.v1_7_R3.MinecraftServer.run(MinecraftServer.java
+:436) [craftbukkit-1.7.9-R0.2.jar:git-Bukkit-1.7.9-R0.1-10-g8688bd4-b3092jnks]
+        at net.minecraft.server.v1_7_R3.ThreadServerApplication.run(SourceFile:6
+28) [craftbukkit-1.7.9-R0.2.jar:git-Bukkit-1.7.9-R0.1-10-g8688bd4-b3092jnks]
+Caused by: java.io.FileNotFoundException: Jar does not contain plugin.yml
+        ... 9 more
+[18:43:12 INFO]: Preparing level "world"
+[18:43:12 INFO]: Preparing start region for level 0 (Seed: -1205390710438840846)
+
+[18:43:12 INFO]: ----- Bukkit Auto Updater -----
+[18:43:12 INFO]: It appears that you're running a Beta Build, when you've specif
+ied in bukkit.yml that you prefer to run Recommended Builds.
+[18:43:12 INFO]: If you would like to be kept informed about new Beta Build rele
+ases, it is recommended that you change 'preferred-channel' in your bukkit.yml t
+o 'beta'.
+[18:43:12 INFO]: With that set, you will be told whenever a new version is avail
+able for download, so that you can always keep up to date and secure with the la
+test fixes.
+[18:43:12 INFO]: If you would like to disable this warning, simply set 'suggest-
+channels' to false in bukkit.yml.
+[18:43:12 INFO]: ----- ------------------- -----
+[18:43:13 INFO]: Preparing spawn area: 6%
+[18:43:14 INFO]: Preparing spawn area: 59%
+[18:43:15 INFO]: Preparing start region for level 1 (Seed: -1205390710438840846)
+
+[18:43:16 INFO]: Preparing spawn area: 60%
+[18:43:16 INFO]: Preparing start region for level 2 (Seed: -1205390710438840846)
+
+[18:43:17 INFO]: Server permissions file permissions.yml is empty, ignoring it
+[18:43:17 INFO]: Done (5,164s)! For help, type "help" or "?"
